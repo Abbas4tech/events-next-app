@@ -1,11 +1,12 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { Fragment } from "react";
+import EventList from "../components/events/EventList";
+import { getFeaturedEvents } from "../data/dummy-data";
 
 export default function Home() {
+  const featuredEvents = getFeaturedEvents();
   return (
-    <div className={styles.main}>
-      <h1>Hello Next App</h1>
-    </div>
+    <Fragment>
+      <EventList items={featuredEvents} />
+    </Fragment>
   );
 }
