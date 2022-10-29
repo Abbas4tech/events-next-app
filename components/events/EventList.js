@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import EventItem from "./EventItem";
-
+import classes from "./event-list.module.css";
 const EventList = ({ items }) => {
   return (
     <Fragment>
-      <ul>
+      <ul className={classes.list}>
         {items.map(({ id, title, image, date, location }) => (
           <EventItem
             key={id}
