@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
+import Button from "../UI/Button";
 import classes from "./event-item.module.css";
 
 const EventItem = (props) => {
@@ -29,7 +30,7 @@ const EventItem = (props) => {
           </section>
         </article>
         <article className={classes.actions}>
-          <Link href={exploreLink}>Explore Events</Link>
+          <Button link={exploreLink}>Explore Events</Button>
         </article>
       </section>
     </li>
